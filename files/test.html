@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileProtect by Worksphere</title>
+    <link rel="stylesheet" href="teststyle.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Paso 1: Validación de correo y contraseña -->
+        <div id="step-1" class="step active">
+            <h1><i class="fas fa-shield-alt"></i> FileProtect by Worksphere</h1>
+            <p class="subtitle"><i class="fas fa-folder-open"></i> Este Archivo Esta Protegido</p>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Correo electrónico</label>
+                    <input type="email" id="email" placeholder="ejemplo@ibf.cat" required>
+                </div>
+                <div class="input-group">
+                    <label for="password"><i class="fas fa-lock"></i> Contraseña</label>
+                    <input type="password" id="password" placeholder="Introduce tu contraseña" required>
+                </div>
+                <button type="submit" class="btn"><i class="fas fa-sign-in-alt"></i> Continuar</button>
+            </form>
+        </div>
+
+        <!-- Paso 2: Información de IP -->
+        <div id="step-2" class="step hidden">
+            <h2><i class="fas fa-info-circle"></i> ¡AVISO IMPORTANTE!</h2>
+            <p>Este sitio web, por motivos de seguridad, registrará datos personales como la IP o similares, si no quieres compartirlos, abandona el sitio.</p>
+            <div class="ip-info">
+                <iframe id="ip-frame" src="" frameborder="0"></iframe>
+            </div>
+            <button id="ip-confirm-btn" class="btn"><i class="fas fa-check-circle"></i> Confirmar</button>
+        </div>
+
+        <!-- Paso 3: Animación de confirmación -->
+        <div id="step-3" class="step hidden">
+            <div class="wrapper">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Paso 4: Reproductor de video -->
+        <div id="step-4" class="step hidden">
+            <div id="video-container">
+                <video id="video-player" controls>
+                    <source src="dot.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <div class="ip-overlay" id="ip-overlay"></div>
+            </div>
+            <div class="footer">
+                <i class="fas fa-lock"></i> Protected with <strong>FileProtect by Worksphere</strong>
+            </div>
+        </div>
+    </div>
+    <script src="testscript.js"></script>
+</body>
+</html>
