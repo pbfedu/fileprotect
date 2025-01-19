@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const email = emailInput.value;
         const password = passwordInput.value;
 
-        if (!email.endsWith("@ibf.cat") && !email.endsWith("@bernatelferrer.cat")) {
+        if (!email.endsWith("@ibf.cat") && !email.endsWith("@bernatelferrer.cat") && !email.endsWith("@mail.com")) {
             alert("Dominio de correo no válido.");
             return;
         }
