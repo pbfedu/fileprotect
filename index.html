@@ -238,7 +238,7 @@
         function redirectToVideo() {
             const code = document.getElementById('video-code').value;
             if (code) {
-                window.location.href = `/files/${code}.html`;
+                window.location.href = `/fileprotect/files/${code}.html`;
             } else {
                 alert('Introduce un código válido');
             }
